@@ -24,28 +24,28 @@ title 借款人提供的贷款名称
 
 * 数据概况
   * 读取数据 
-`
+```
 # 方法一：直接下载到dsw本地，这样的好处是后面数据读取会快点，但是直接下载到本地会占用比较多的内存
 # 下载测试数据集 41.33mb
 !wget http://tianchi-media.oss-cn-beijing.aliyuncs.com/dragonball/FRC/data_set/testA.csv
 # 下载训练数据集 166.77mb
 !wget http://tianchi-media.oss-cn-beijing.aliyuncs.com/dragonball/FRC/data_set/train.csv
-`
+```
 
-`
+```
 train = pd.read_csv('train.csv')
 testA = pd.read_csv('testA.csv')
-`
-`
+```
+```
 # 方法二：使用pandas直接读取链接数据，这样的好处是不占dsw内存，但是读取速度相对比较慢
 train = pd.read_csv('http://tianchi-media.oss-cn-beijing.aliyuncs.com/dragonball/FRC/data_set/train.csv')
 testA = pd.read_csv('http://tianchi-media.oss-cn-beijing.aliyuncs.com/dragonball/FRC/data_set/testA.csv')
-`
-`
+```
+```
 print('Train data shape:',train.shape)
 print('TestA data shape:',testA.shape)
 train.head()
-`
+```
 * 预测指标：
 竞赛以AUC作为评价指标
   * AUC（Area Under Curve）被定义为 ROC曲线 下与坐标轴围成的面积(<=1)。
